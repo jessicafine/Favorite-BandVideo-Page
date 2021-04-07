@@ -1,0 +1,356 @@
+/*  Universal Selector */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* Clearfix*/
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+/*Elements*/
+html {
+	background: #1a1a1a;
+	background-image: url("../gallery/images/Background2.jpeg");
+    background-attachment: fixed;
+}
+body {
+	font-family: 'Nova Square', cursive;
+	font-size: 120%;
+	width: 100%;
+	margin: 0 auto;
+	color: white;
+	background-color: rgba(194, 213, 219, 0.774);
+}
+header {
+	width: 100%;
+	margin: 0;
+	background-image: linear-gradient(to right, green, white, orange);
+    border-bottom: 3px ridge #f0f0f5;
+}
+header h1 {
+	font-size: 300%;
+	font-variant: small-caps;
+	padding: .5em 0 0;
+	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+header img {
+	float: left;
+	margin: 1em 1em 0 2em;
+	max-width: 200px;
+    width: 100%;
+}
+section {
+	float: left;
+	width: 75%;
+	margin: 1em 1em 2em 0;
+}
+article {
+	width: 75%;
+	margin: 0 auto 2em;
+	padding: 2em 1em;
+	background-color: blue;
+	border-radius: 15px;
+}
+article h4 {
+	margin: 0 .5em 10px;
+	font-size: 125%;
+}
+h2 {
+	text-align: center;
+	font-size: 200%;
+	font-variant: small-caps;
+	margin: 15px 0;
+}
+/* Navigation Menu*/
+.nav_menu {
+	border-bottom: 3px ridge #f0f0f5;
+}
+.nav_menu ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0; 
+}
+.nav_menu ul li {
+	width: 25%;
+	background-color:red;
+	margin: 0;
+	text-align: center; 
+	transition: all .75s;
+}
+.nav_menu ul li a {
+	display: inline-block;
+	width: 100%;
+	padding: 10px 0;
+	text-decoration: none;
+	font-size: 120%;
+	color: yellow;
+	font-weight: bold;
+	font-variant: small-caps;
+	transition: all .75s;
+}
+.nav_menu ul li a:hover {
+	background-color: green;
+	color:blue;
+}
+/* Sidebar Menu */
+.bookmarks {
+	float: left;
+	width: 12%;
+	margin: 10em 2em 0 3em;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 100px;
+}
+.bookmarks ul {
+	list-style: none;
+	width: 95%;
+	margin: 2em 0 0;
+}
+.bookmarks ul li {
+	margin: 0 1em 3px 0;
+	transition: all .5s;
+}
+.bookmarks ul li a {
+	padding: .5em .5em;
+	display: block;
+	background-color: orange;
+	border: 1px solid purple;
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-left: 0;
+	transition: all .5s;
+}
+.bookmarks ul li a:hover {
+	background-color: red;
+	color: yellow;
+	border: 1px solid white;
+}
+.bookmarks ul li:hover {
+	margin: 0 0 3px 1em;
+}
+/* Scroll-To-Top Button */
+#myBtn {
+	display: none; /* Hidden by default */
+	width: 88%;
+	z-index: 99; /* Make sure it does not overlap */
+	border: 1px solid purple;
+	outline: none; /* Remove outline */
+	background-color: orange; /* Set a background color */
+	color: white; /* Text color */
+	font-weight: bold;
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: .5em .5em;
+	margin: 0 1em 3px 0;
+	text-align: left;
+	transition: all .5s;
+	font-family: 'Nova Square', cursive;
+	font-size: 100%;
+	border-radius: 5px;
+}
+#myBtn:hover {
+	background-color: red;
+	color: yellow;
+	margin: 0 0 3px 1em;
+	border: 1px solid white;
+}
+#cornerBtn {
+	display: none; /* Hidden by default */
+	position: fixed;
+	left: 5px;
+	bottom: 150px;
+	z-index: 99; /* Make sure it does not overlap */
+	border: 1px solid black;
+	outline: none; /* Remove outline */
+	font-weight: bold;
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: .5em .5em;
+	margin: 0 1em 3px 0;
+	font-family: 'Nova Square', cursive;
+	font-size: 100%;
+	border-radius: 5px;
+	background-color: rgba(0,0,0,.6);
+	color: white;
+	transition: all .5s;
+}
+#cornerBtn:hover {
+	background-color: rgba(0,0,0,1);
+	color: red;
+	border: 1px solid red;
+}
+/* Video Wrapper */
+.videowrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	margin: 0 auto;
+	border: 6px ridge green;
+	box-shadow: 5px 5px 15px 10px green;
+}
+.videowrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.caption p {
+	margin: 2em;
+	line-height: 1.5;
+	font-weight: bold;
+}
+/* Home Page */
+#homepage {
+	float: left;
+	max-width: 1280px;
+	width: 80%;
+	margin: 0 auto;
+	line-height: 1.5;
+}
+#homepage div {
+	background-color: rgba(0,0,0,.75);
+	margin: 1em;
+	padding-bottom: 2em;
+	border: 1px solid darkred;
+	border-radius: 25px;
+}
+#homepage h3 {
+	text-align: center;
+	font-size: 200%;
+	font-variant: small-caps;
+	margin: 15px 0;
+}
+#homepage img {
+	display: block;
+	max-width: 1080px;
+	width: 100%;
+	margin: 20px auto;
+	border: 5px ridge darkred;
+	border-radius: 25px;
+	box-shadow: 10px 10px 25px black;
+}
+#homepage h4 {
+	font-size: 150%;
+	font-variant: small-caps;
+	padding: 15px 1em;
+	border-bottom: 1px solid darkred;
+	margin: 30px auto 15px;
+}
+#homepage p {
+	margin-left: 1em;
+}
+#homepage ul {
+	margin-left: 3em;
+}
+#homepage div p a {
+	text-decoration: none;
+	color: white;
+}
+#homepage div p a:hover {
+	text-decoration: underline;
+}
+.bandInfoLabel {
+	font-size: 80%;
+	font-variant: small-caps;
+	font-style: italic;
+	color: green;
+	margin-right: 9px;
+}
+#bandSummary p {
+	margin: 0 2em 2em;
+}
+#top20songs {
+	column-count: 3;
+}
+#top20songs ol {
+	font-size: 110%;
+	text-align: center;
+}
+#top20songs li {
+	font-size: 80%;
+	text-align: left;
+	margin-left: 2.5em;
+}
+/* Image Gallery */
+
+/* Discography Page */
+#discography {
+	margin: 0 auto;
+	line-height: 1.5;
+}
+#discography h5 {
+	clear: both;
+	font-size: 250%;
+	background-color: black;
+	border: 1px solid darkred;
+	margin: 35px 0;
+	padding: 10px 1em;
+	color: white;
+	border-radius: 50px;
+	text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;
+}
+#discography h6 {
+	clear: both;
+	font-size: 200%;
+	background-color: darkred;
+	margin: 70px 0 15px;
+	padding: 10px 1em;
+	color: white;
+	border-radius: 50px;
+	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+.pimgLeft img, .pimgRight img {
+	max-width: 500px;
+	border-radius: 10px;
+	box-shadow: -10px -10px 20px #1a1a1a, 10px 10px 20px #1a1a1a;
+	width: 100%;
+}
+.pimgLeft img {
+	float: left;
+	margin: 0 1em 1em 3em;
+}
+.pimgRight img {
+	float: right;
+	margin: 0 3em 1em 1em;
+}
+.ptxtRight h7, .ptxtLeft h7 {
+	font-size: 110%;
+	color: red;
+	display: block;
+	border-bottom: 1px solid darkred;
+	margin: 1em .25em 1em;	
+	padding: .5em;	
+}
+.ptxtRight p, .ptxtLeft p, .ptxtLeft ol, .ptxtRight ol {
+	font-size: 90%;
+	margin: 1em 2.5em 1em;
+}
+.ptxtLeft ol, .ptxtRight ol {
+	margin-left: 5em;
+}
+/* Footer */
+footer {
+	clear: both;
+	width: 100%;
+	margin: 0;
+	padding: 3em 0;
+	background-color: white;
+    border-top: 3px ridge #f0f0f5;
+    background-image: linear-gradient(to right, green, white, orange);
+}
+footer p {
+	font-size: 90%;
+	font-weight: bold;
+	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+	font-variant: small-caps;
+	text-align: center;
+}
+/* Hide SlickNav in Full Screen Mode */
+.slicknav_menu {
+	display: none;
+}
